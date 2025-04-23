@@ -1,0 +1,99 @@
+/* Reset some defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Animated gradient background */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #fff;
+  }
+  
+  @keyframes gradientBG {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background: rgba(44, 47, 51, 0.8); /* semi-transparent for readability */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  nav ul li {
+    margin-left: 20px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  nav ul li a:hover {
+    color: #7289da;
+  }
+  
+  /* Form Container for Sign-Up */
+  .form-container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 80px auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    text-align: center;
+  }
+  .form-container h1 {
+    margin-bottom: 20px;
+  }
+  
+  /* Form Group Styles */
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* Button Styles */
+  .btn {
+    width: 100%;
+    padding: 12px;
+    background: #7289da;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .btn:hover {
+    background: #677bc4;
+  }
+  

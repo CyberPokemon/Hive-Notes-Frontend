@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HiveNotes - Home</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="logo">HiveNotes</div>
+    <div class="nav-profile">
+      <img src="profile.jpg" alt="Profile Icon" class="profile-icon" />
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTAINER: Sidebar + Notes List -->
+  <div class="main-container">
+    
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h2>Folders</h2>
+      <ul class="folders-list" id="foldersList"></ul>
+
+      <div class="sidebar-controls">
+        <button id="deleteAllBtn">🗑️ Delete All Notes</button>
+
+        <button class="new-note-btn" id="newNoteBtn">+ New Note</button>
+        <input
+          type="text"
+          class="search-bar"
+          id="searchBar"
+          placeholder="Search..."
+          title="Search notes by name or #keyword"
+        />
+      </div>
+    </aside>
+
+    <!-- NOTES AREA -->
+    <section class="notes-area" id="notesArea">
+      <h2 id="folderTitle">My Notes</h2>
+      <div class="notes-list" id="notesList">
+        <p class="empty-message" id="emptyMessage">
+          No notes found. Click “New Note” to create one!
+        </p>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- MODAL for creating a new note (hidden by default) -->
+  <div class="modal" id="newNoteModal">
+    <div class="modal-content">
+      <!-- Close button -->
+      <span class="close-modal" id="closeModalBtn">&times;</span>
+      <h2>Create a New Note</h2>
+      <form id="newNoteForm">
+        <label for="noteTitle">Note Name</label>
+        <input type="text" id="noteTitle" placeholder="Enter note name" required />
+
+        <label for="noteFolder">Note Folder</label>
+        <select id="noteFolder">
+          <!-- Folders populated by JS; includes 'New Folder...' option -->
+        </select>
+
+        <!-- Hidden input for new folder name -->
+        <div class="new-folder-field" id="newFolderField" style="display: none;">
+          <label for="newFolderName">New Folder Name</label>
+          <input type="text" id="newFolderName" placeholder="Enter new folder name" />
+        </div>
+
+        <label for="noteKeywords">Note Keywords (#keyword)</label>
+        <input
+          type="text"
+          id="noteKeywords"
+          placeholder="#keyword1 #keyword2"
+        />
+
+        <button type="submit" class="create-note-btn">Create Note</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="home.js"></script>
+  <script src="config.js"></script>
+</body>
+</html>

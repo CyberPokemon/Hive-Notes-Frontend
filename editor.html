@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HiveNotes - Editor</title>
+  <link rel="stylesheet" href="editor.css" />
+</head>
+<body>
+  <nav class="editor-nav">
+    <div class="logo">HiveNotes Editor</div>
+    <div class="nav-actions">
+      <button class="nav-btn" id="backToHomeBtn">Back to Home</button>
+      <button class="nav-btn save-btn" id="saveEditorBtn">Save</button>
+    </div>
+  </nav>
+
+  <!-- Editor Toolbar -->
+  <div class="editor-toolbar">
+    <button class="toolbar-btn" data-command="bold"><b>B</b></button>
+    <button class="toolbar-btn" data-command="italic"><i>I</i></button>
+    <button class="toolbar-btn" data-command="underline"><u>U</u></button>
+    <button class="toolbar-btn" data-command="insertUnorderedList">• List</button>
+    <!-- Image Upload -->
+    <button class="toolbar-btn" id="imageUploadBtn">Image</button>
+    <input type="file" id="imageUploadInput" accept="image/*" style="display:none;" />
+  </div>
+
+  <!-- Editable Area -->
+  <div class="editor-content" id="editorContent" contenteditable="true">
+    <!-- Note content will be loaded here -->
+  </div>
+
+  <script src="editor.js"></script>
+  <script src="config.js"></script>
+</body>
+</html>

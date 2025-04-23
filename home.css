@@ -1,0 +1,221 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 0.75rem 1rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+  }
+  
+  /* MAIN CONTAINER */
+  .main-container {
+    display: flex;
+    height: calc(100vh - 56px);
+  }
+  
+  /* SIDEBAR */
+  .sidebar {
+    width: 250px;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .sidebar h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  .folders-list {
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+  .folders-list li {
+    padding: 0.5rem 0;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .folders-list li:hover {
+    background: #f0f0f0;
+  }
+  .sidebar-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .new-note-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .new-note-btn:hover {
+    background-color: #444;
+  }
+  .search-bar {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* NOTES AREA */
+  .notes-area {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  .notes-area h2 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  .notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .empty-message {
+    font-style: italic;
+    color: #666;
+  }
+  
+  /* MODAL OVERLAY */
+  .modal {
+    display: none; /* hidden by default */
+    position: fixed; /* stay in place */
+    z-index: 999; /* on top of everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  }
+  
+  /* MODAL CONTENT BOX */
+  .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 1.5rem;
+    width: 400px;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  /* CLOSE BUTTON (the “×”) */
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* FORM STYLES INSIDE MODAL */
+  #newNoteForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  #newNoteForm label {
+    font-weight: 600;
+  }
+  
+  #newNoteForm input[type='text'],
+  #newNoteForm select,
+  #newNoteForm textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none; /* for textarea */
+  }
+  
+  .create-note-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .create-note-btn:hover {
+    background-color: #555;
+  }
+  
+
+  .logout-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .logout-btn:hover {
+    background-color: #c9302c;
+  }
+
+  /* Delete All Button */
+#deleteAllBtn {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+}
+
+/* Hover effect */
+#deleteAllBtn:hover {
+  background-color: #c9302c;
+  transform: scale(1.05);
+}
+
+/* Button when clicked */
+#deleteAllBtn:active {
+  transform: scale(0.95);
+}
+

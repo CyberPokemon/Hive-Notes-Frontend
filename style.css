@@ -1,0 +1,87 @@
+/* Reset some defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Animated gradient background */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #fff;
+  }
+  
+  @keyframes gradientBG {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background: rgba(44, 47, 51, 0.8); /* semi-transparent for readability */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  nav ul li {
+    margin-left: 20px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  nav ul li a:hover {
+    color: #7289da;
+  }
+  
+  /* Hero Section */
+  .hero {
+    /* Use transparent background so the animated gradient shows through */
+    background: transparent;
+    height: calc(100vh - 60px); /* Adjust height according to nav height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    max-width: 600px;
+  }
+  .hero .btn {
+    text-decoration: none;
+    background: #7289da;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background 0.3s;
+  }
+  .hero .btn:hover {
+    background: #677bc4;
+  }
+  
