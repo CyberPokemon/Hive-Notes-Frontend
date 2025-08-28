@@ -6,5 +6,5 @@ if (window.location.hostname === "localhost") {
   API_BASE_URL = "http://localhost:8080";
 } else {
   // Running on production (your deployed domain)
-  API_BASE_URL = "https://3.108.53.35:8080"; 
+  API_BASE_URL = "https://deployment3-latest.onrender.com"; 
 }
